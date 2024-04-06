@@ -13,6 +13,14 @@ const Start = () => {
     });
   }, []);
   console.log(movie);
+
+  const truncateSting =(str, num) => {
+      if(str?.length > num) {
+        return str.slice(0, num) + '...';
+      }else{
+        return str;
+      }
+  }
   
   return (
     <div className="w-full h-[550px] text-white">
@@ -34,7 +42,7 @@ const Start = () => {
           </button>
           </div>
           <p className="text-gray-400 text-sm">Release: {movie?.release_date}</p>
-          <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-200">{movie?.overview}</p>
+          <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-200">{truncateSting(movie?.overview, 150)}</p>
         </div>
       </div>
     </div>
