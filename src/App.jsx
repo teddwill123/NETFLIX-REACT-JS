@@ -1,9 +1,9 @@
 import { Route, Routes, useNavigate } from "react-router-dom";
-import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Account from "./pages/Account";
+import Player from "./pages/Player";
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
 import { auth } from "./firebase";
@@ -24,20 +24,18 @@ function App() {
         navigate("/login");
       }
     })
-  },[])
+  },[]);
 
   return (
     <>
-
-        < Navbar />
         <ToastContainer theme="dark"/>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/signup' element={<Signup/>} />
           <Route path='/account' element={<Account/>} />
+          <Route path='/player/:id' element={<Player/>} />
         </Routes>
-
     </>
   )
 }

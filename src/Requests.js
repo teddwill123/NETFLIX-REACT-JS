@@ -1,4 +1,3 @@
-// VITE_API_KEY
 
 const requests = {
   requestPopular: `https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_API_KEY}`,

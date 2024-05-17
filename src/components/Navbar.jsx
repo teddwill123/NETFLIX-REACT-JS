@@ -12,7 +12,14 @@ const Navbar = () => {
       </Link>
       
       
-      <div>
+      <div className='hidden md:flex'>
+        <ul className='flex items-start gap-[20px] cursor-pointer text-gray-200'>
+          <li>Home</li>
+          <li>TV Shows</li>
+          <li>Popular</li>
+          <li>Trending</li>
+          <li>Upcoming</li>
+        </ul>
         {/* <Link to="/login">
           <button className='text-white pr-4'>Sign In</button>
         </Link>
@@ -20,14 +27,18 @@ const Navbar = () => {
         <Link to="/signup">
           <button className='bg-red-600 px-6 py-2 cursor-pointer text-white'>Sign Up</button>
         </Link> */}
-          <p 
+      </div>
+
+        <div>
+        <p 
             className='bg-red-600 px-4 py-2 cursor-pointer text-white rounded-md'
             onClick={() => {logout()}}
             >
             Logout
           </p>
+        </div>
 
-      </div>
+
     </div>
   )
 }
