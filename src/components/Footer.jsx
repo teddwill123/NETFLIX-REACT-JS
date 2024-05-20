@@ -13,7 +13,7 @@ const Footer = () => {
             <img className='w[30px]' src={twitter} alt='' />
             <img className='w[30px]' src={youtube} alt='' />
         </div>
-        <ul className='grid lg:grid-cols-4 gap-4 mb-2 list-none text-white sm:grid-cols-2 sm:items-center'>
+        <ul className='grid lg:grid-cols-4 gap-4 mb-2 list-none text-white sm:grid-cols-2 sm:items-center justify-between p-14'>
             <li>Audio Description</li>
             <li>Help Center</li>
             <li>Gift Card</li>

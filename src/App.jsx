@@ -2,7 +2,6 @@ import { Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Account from "./pages/Account";
 import Player from "./pages/Player";
 import { onAuthStateChanged } from "firebase/auth";
 import { useEffect } from "react";
@@ -17,10 +16,10 @@ function App() {
   useEffect(() => {
     onAuthStateChanged(auth, async (user) => {
       if(user) {
-        console.log("Logged In");
+        // console.log("Logged In");
         navigate("/");
       }else{
-        console.log("Logged Out");
+        // console.log("Logged Out");
         navigate("/login");
       }
     })
@@ -33,7 +32,6 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path='/login' element={<Login/>} />
           <Route path='/signup' element={<Signup/>} />
-          <Route path='/account' element={<Account/>} />
           <Route path='/player/:id' element={<Player/>} />
         </Routes>
     </>
